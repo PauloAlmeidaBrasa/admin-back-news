@@ -21,11 +21,12 @@ class UserController extends Controller {
         $this->userService = $userServ;
     }
 
-    public function getUsersByClientId(){
+    public function getByClient(){
         $clientId = $this->userRequest->query('client_id');
 
         $result = $this->userService->allUsersByClientId($clientId);
-        dd($result);
+        return $this->respondWithSucess($result,'users');
+        // dd($result);
     }
 }
 

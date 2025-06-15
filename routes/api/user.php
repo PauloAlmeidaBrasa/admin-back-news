@@ -6,7 +6,7 @@ use App\Http\Controllers\UserController;
 
 
 // Route::middleware(['jwt.verify'])->group(function () {
-    Route::get('/users-by-client', [UserController::class,'getUsersByClientId']);
+    Route::get('/users-by-client', [UserController::class,'getByClient']);
 // });
 
 // Route::middleware('auth:sanctum')->group(function () {
